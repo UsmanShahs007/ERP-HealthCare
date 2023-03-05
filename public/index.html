@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Healthcare ERP System</title>
+      <link rel="stylesheet" type="text/css" href="./styles/style.css">
+      <script defer type="module" src="scripts/main.js"></script>
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  </head>
+  <body>
+    <style>
+    /*styling everything to center*/
+    .tab-content>.active {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+    }
+    </style>
+    <!-- Navigation bar -->
+    <ul class="nav nav-tabs" id="herpTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="patients-tab" data-toggle="tab" href="#patients" role="tab" aria-controls="patients" aria-selected="false">Patients</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="appointments-tab" data-toggle="tab" href="#appointments" role="tab" aria-controls="appointments" aria-selected="false">Appointments</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="billing-tab" data-toggle="tab" href="#billing" role="tab" aria-controls="billing" aria-selected="false">Billing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="admin-tab" data-toggle="tab" href="#admin" role="tab" aria-controls="admin" aria-selected="false">Admin</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="finance-tab" data-toggle="tab" href="#finance" role="tab" aria-controls="finance" aria-selected="false">Finance</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="staff-tab" data-toggle="tab" href="#staff" role="tab" aria-controls="staff" aria-selected="false">Staff</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="supply-tab" data-toggle="tab" href="#supply" role="tab" aria-controls="supply" aria-selected="false">Supply</a>
+      </li>
+    </ul>
+
+    <!-- Tab content -->
+    <div class="tab-content" id="herpTabContent">
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <h1>Welcome to ERP Hospital</h1>
+        <section>
+            <h2>Statistics</h2>
+            <ul>
+                <li>Number of Patients: 1000</li>
+                <li>Number of Appointments: 500</li>
+                <li>Number of Staff: 100</li>
+            </ul>
+        </section>
+        <section>
+            <h2>General Information</h2>
+            <p>ERP Hospital is a state-of-the-art medical facility located in the heart of Anytown. We offer a wide range of services, including emergency care, inpatient and outpatient services, and specialized care in areas such as cardiology, oncology, and orthopedics. Our team of highly skilled and compassionate physicians, nurses, and support staff are dedicated to providing the highest quality care to our patients.</p>
+        </section>
+        <section class="container-fluid  p-3 my-3 bg-dark text-white">
+            <h2>Patient Reviews</h2>
+            <p>Ahmad: System was great and was very helpful. I'm very satisfied</p>
+            <p>Usman: I experienced a much efficient process compared to traditional way.</p>
+        </section>
+        <section>
+            <h2>Contact Us</h2>
+            <p>Address: 123 Main St, Sector X-8/4, Islamabad Pakistan</p>
+            <p>Phone: 051-260-1149</p>
+            <p>Email: info@ERP-hospital.com</p>
+        </section>
+      </div>
+      <div class="tab-pane fade" id="patients" role="tabpanel" aria-labelledby="patients-tab">
+        <h1>Patient Management</h1>
+        <section id="add-patient">
+          <h2>Add Patient</h2>
+          <form id="add-patient">
+            <label for="patient-name">Patient Name:</label>
+            <input type="text" id="patient-name" name="patient-name">
+            <label for="patient-id">Patient ID:</label>
+            <input type="text" id="patient-id" name="patient-id">
+            <label for="patient-dob">Patient Date of Birth:</label>
+            <input type="date" id="patient-dob" name="patient-dob">
+            <label for="patient-address">Patient Address:</label>
+            <input type="text" id="patient-address" name="patient-address">
+            <label for="patient-phone">Patient Phone:</label>
+            <input type="text" id="patient-phone" name="patient-phone">
+            <input type="submit" value="Add Patient">
+          </form>
+        </section>
+        <section id="patient-list">
+        <h2>Patient List</h2>
+        <table>
+          <tr>
+            <th id="patient-id">Patient ID</th>
+            <th id="patient-name">Patient Name</th>
+            <th id="patient-dob">Date of Birth</th>
+            <th id="patient-address">Address</th>
+            <th id="patient-phone">Phone</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>John Doe</td>
+            <td>01/01/1990</td>
+            <td>123 Main St, Anytown USA</td>
+            <td>555-555-5555</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Jane Smith</td>
+            <td>05/01/1980</td>
+            <td>456 Park Ave, Anycity USA</td>
+            <td>555-555-5556</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Michael Johnson</td>
+            <td>10/01/1970</td>
+            <td>789 Elm St, Anyville USA</td>
+            <td>555-555-5557</td>
+          </tr>
+        </table>
+        </section>
+        <section id="patient-history">
+          <h2>Patient Medical History</h2>
+          <table>
+            <tr>
+              <th>Patient ID</th>
+              <th>Patient Name</th>
+              <th>Medical Condition</th>
+              <th>Treatment</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>John Doe</td>
+              <td>High Blood Pressure</td>
+              <td>Prescription Medication</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>John Doe</td>
+              <td>Diabetes</td>
+              <td>Diet and Exercise</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Jane Smith</td>
+              <td>Asthma</td>
+              <td>Inhaler</td>
+            </tr>
+          </table>
+        </section>
+      </div>
+      <div class="tab-pane fade" id="appointments" role="tabpanel" aria-labelledby="appointments-tab">
+        <h1>Appointment Management</h1>
+        <section id="booking">
+          <h2>Book Appointment</h2>
+          <form id="booking">
+            <label for="patient-name">Patient Name:</label>
+            <input type="text" id="patient-name" name="patient-name">
+            <label for="patient-id">Patient ID:</label>
+            <input type="text" id="patient-id" name="patient-id">
+            <label for="appointment-date">Appointment Date:</label>
+            <input type="date" id="appointment-date" name="appointment-date">
+            <label for="appointment-time">Appointment Time:</label>
+            <input type="time" id="appointment-time" name="appointment-time">
+            <label for="doctor-name">Doctor Name:</label>
+            <input type="text" id="doctor-name" name="doctor-name">
+            <input type="submit" value="Book Appointment">
+          </form>
+        </section>
+        <section id="appointment-list">
+          <h2>Appointment List</h2>
+          <table>
+            <tr>
+              <th id="patient-id">Appointment ID</th>
+              <th id="patient-name">Patient Name</th>
+              <th id="appointment-date">Appointment Date</th>
+              <th id="appointment-time">Appointment Time</th>
+              <th id="doctor-name">Doctor</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>John Doe</td>
+              <td>01/15/2023</td>
+              <td>10:00 AM</td>
+              <td>Dr. Smith</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Jane Smith</td>
+              <td>01/20/2023</td>
+              <td>02:00 PM</td>
+              <td>Dr. Johnson</td>
+            </tr>
+          </table>
+        </section>
+      </div>
+      <div class="tab-pane fade" id="billing" role="tabpanel" aria-labelledby="billing-tab">
+        <h1>Billing Management</h1>
+        <section id="patient-invoice">
+          <h2>Patient Billing</h2>
+          <form id="patient-invoice">
+            <label for="patient-name">Patient Name:</label>
+            <input type="text" id="patient-name" name="patient-name">
+            <label for="visit-date">Visit Date:</label>
+            <input type="date" id="visit-date" name="visit-date">
+            <label for="amount">Amount:</label>
+            <input type="text" id="amount" name="amount">
+            <input type="submit" value="Generate Bill">
+          </form>
+        </section>
+        <!--section id="insurance-invoice">
+          <h2>Insurance Billing</h2>
+          <form>
+            <label for="insurance-company">Insurance Company:</label>
+            <input type="text" id="insurance-company" name="insurance-company">
+            <label for="patient-name">Patient Name:</label>
+            <input type="text" id="patient-name" name="patient-name">
+            <label for="visit-date">Visit Date:</label>
+            <input type="date" id="visit-date" name="visit-date">
+            <label for="amount">Amount:</label>
+            <input type="text" id="amount" name="amount">
+            <input type="submit" value="Submit Claim">
+          </form>
+        </section-->
+        <section id="payments-list">
+          <h2>Payments</h2>
+          <table>
+            <tr>
+              <th id="visit-date">Date</th>
+              <th id="patient-name">Patient Name</th>
+              <th id="amount">Amount</th>
+            </tr>
+            <tr>
+              <td>01/01/2023</td>
+              <td>John Doe</td>
+              <td>Rs100</td>
+            </tr>
+            <tr>
+              <td>01/05/2023</td>
+              <td>Jane Smith</td>
+              <td>Rs200</td>
+            </tr>
+            <tr>
+              <td>01/15/2023</td>
+              <td>Michael Johnson</td>
+              <td>Rs250</td>
+            </tr>
+          </table>
+        </section>
+      </div>
+      <div class="tab-pane fade" id="admin" role="tabpanel" aria-labelledby="admin-tab">
+        <h1>Welcome to the Admin Panel</h1>
+        <section>
+          <section>
+            <h2>Patients</h2>
+            <ul>
+              <li><a onclick="viewPatients()">View Patients</a></li>
+              <li><a onclick="addPatient()">Add Patient</a></li>
+              <li><a onclick="updatePatient()">Update Patient</a></li>
+              <li><a onclick="deletePatient()">Delete Patient</a></li>
+            </ul>
+          </section>
+          <section>
+            <h2>Appointments</h2>
+            <ul>
+              <li><a onclick="viewAppointments()">View Appointments</a></li>
+              <li><a onclick="scheduleAppointment()">Schedule Appointment</a></li>
+              <li><a onclick="cancelAppointment()">Cancel Appointment</a></li>
+            </ul>
+          </section>
+          <section>
+            <h2>Billing</h2>
+            <ul>
+              <li><a onclick="viewBilling()">View Billing</a></li>
+              <li><a onclick="processBilling()">Process Billing</a></li>
+              <li><a onclick="manageBilling()">Manage Billing</a></li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <h2>Users</h2>
+          <ul>
+            <li><a onclick="viewUsers()">View Users</a></li>
+            <li><a onclick="addUser()">Add User</a></li>
+            <li><a onclick="updateUser()">Update User</a></li>
+            <li><a onclick="deleteUser()">Delete User</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Reports</h2>
+          <ul>
+            <li><a onclick="viewReports()">View Reports</a></li>
+            <li><a onclick="generateReports()">Generate Reports</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="tab-pane fade" id="finance" role="tabpanel" aria-labelledby="finance-tab">
+        <h1>Financial Management</h1>
+        <section id="revenue-list">
+          <h2>Revenue</h2>
+          <table>
+            <tr>
+              <th>Date</th>
+              <th>Description</th>
+              <th>Amount</th>
+            </tr>
+            <tr>
+              <td>01/01/2023</td>
+              <td>Patient Billing</td>
+              <td>Rs5,000</td>
+            </tr>
+            <tr>
+              <td>01/05/2023</td>
+              <td>Insurance Reimbursement</td>
+              <td>Rs2,500</td>
+            </tr>
+            <tr>
+              <td>01/15/2023</td>
+              <td>Pharmacy Sales</td>
+              <td>Rs1,000</td>
+            </tr>
+          </table>
+        </section>
+        <section id="expense-list">
+          <h2>Expenses</h2>
+          <table>
+            <tr>
+              <th>Date</th>
+              <th>Description</th>
+              <th>Amount</th>
+            </tr>
+            <tr>
+              <td>01/02/2023</td>
+              <td>Salaries</td>
+              <td>Rs3,500</td>
+            </tr>
+            <tr>
+              <td>01/10/2023</td>
+              <td>Rent</td>
+              <td>Rs1,500</td>
+            </tr>
+            <tr>
+              <td>01/20/2023</td>
+              <td>Supplies</td>
+              <td>Rs500</td>
+            </tr>
+           <tr>
+             <td>Total</td>
+             <td></td>
+             <td>Rs7,500</td>
+           </tr>
+          </table>
+        </section>
+        <section id="net-profit">
+          <h2>Profit/Loss</h2>
+          <p>Profit/Loss: Rs2,000</p>
+        </section>
+      </div>
+      <div class="tab-pane fade" id="staff" role="tabpanel" aria-labelledby="staff-tab">
+        <h1>Human Resources</h1>
+        <section id="add-employee">
+          <h2>Employee Information</h2>
+          <form id="add-employee">
+            <label for="employee-name">Employee Name:</label>
+            <input type="text" id="employee-name" name="employee-name">
+            <label for="employee-id">Employee ID:</label>
+            <input type="text" id="employee-id" name="employee-id">
+            <label for="employee-role">Employee Role:</label>
+            <input type="text" id="employee-role" name="employee-role">
+            <label for="employee-salary">Employee Salary:</label>
+            <input type="text" id="employee-salary" name="employee-salary">
+            <label for="employee-hire-date">Employee Hire Date:</label>
+            <input type="date" id="employee-hire-date" name="employee-hire-date">
+            <input type="submit" value="Add Employee">
+          </form>
+        </section>
+        <section id="employee-list">
+          <h2>Employee List</h2>
+          <table>
+            <tr>
+              <th id="employee-id">Employee ID</th>
+              <th id="employee-name">Employee Name</th>
+              <th id="employee-role">Role</th>
+              <th id="employee-salary">Salary</th>
+              <th id="employee-hire-date">Hire Date</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>John Doe</td>
+              <td>Nurse</td>
+              <td>Rs50,000</td>
+              <td>01/01/20
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Jane Smith</td>
+              <td>Doctor</td>
+              <td>Rs100,000</td>
+              <td>05/01/2020</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Michael Johnson</td>
+              <td>Receptionist</td>
+              <td>Rs30,000</td>
+              <td>10/01/2019</td>
+            </tr>
+          </table>
+        </section>
+        <section id="employee-attendance">
+          <h2>Employee Attendance</h2>
+          <table>
+            <tr>
+              <th>Employee ID</th>
+              <th>Employee Name</th>
+              <th>Date</th>
+              <th>Absents</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>John Doe</td>
+              <td>01/01/2023</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>John Doe</td>
+              <td>01/02/2023</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Jane Smith</td>
+              <td>01/01/2023</td>
+              <td>1</td>
+            </tr>
+          </table>
+        </section>
+      </div>
+      <div class="tab-pane fade" id="supply" role="tabpanel" aria-labelledby="supply-tab">
+        <h1>Supply Chain Management</h1>
+        <section id="add-item">
+          <h2>Add Item</h2>
+          <form id="add-item">
+            <label for="item-name">Item Name:</label>
+            <input type="text" id="item-name" name="item-name">
+            <label for="item-id">Item ID:</label>
+            <input type="text" id="item-id" name="item-id">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity">
+            <label for="rate">Rate:</label>
+            <input type="number" id="rate" name="rate">
+            <input type="submit" value="Add Item">
+          </form>
+        </section>
+        <section id="inventory-list">
+          <h2>Inventory List</h2>
+          <table>
+            <tr>
+              <th id="item-id">Item ID</th>
+              <th id="item-name">Item Name</th>
+              <th id="quantity">Quantity</th>
+              <th id="rate">Rate</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Surgical Gloves</td>
+              <td>1000</td>
+              <td>Rs50</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Gauze</td>
+              <td>5000</td>
+              <td>Rs100</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Suture Needles</td>
+              <td>2000</td>
+              <td>Rs80</td>
+            </tr>
+          </table>
+        </section>
+        <section id="supplier-list">
+          <h2>Supplier List</h2>
+          <table>
+            <tr>
+              <th>Supplier ID</th>
+              <th>Supplier Name</th>
+              <th>Supplier Contact</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Medsupply Inc.</td>
+              <td>555-555-5555</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Hospital Supplies LLC</td>
+              <td>555-555-5556</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Healthcare Supplies Inc.</td>
+              <td>555-555-5557</td>
+            </tr>
+          </table>
+        </section>
+      </div>
+    </div>
+
+    <footer>
+        <p>Copyright (c) 2023 Healthcare ERP System - Usman . Ahmed</p>
+    </footer>
+
+    <!-- Bootstrap JS (jQuery and Popper.js are required) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+      //adding tab functionality
+      var herpTab = document.getElementById('herpTab')
+      var herpTabContent = document.getElementById('herpTabContent')
+
+      new bootstrap.Tab(herpTab).show()
+
+      herpTab.addEventListener('shown.bs.tab', function(event) {
+        var tab = event.target.getAttribute('href')
+        window.history.pushState(null, null, tab)
+      })
+    </script>
+  </body>
+</html>

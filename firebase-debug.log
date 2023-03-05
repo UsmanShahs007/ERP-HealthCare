@@ -1,0 +1,42 @@
+[debug] [2023-03-05T10:19:31.930Z] ----------------------------------------------------------------------
+[debug] [2023-03-05T10:19:31.933Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\DELL\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only hosting
+[debug] [2023-03-05T10:19:31.933Z] CLI Version:   11.19.0
+[debug] [2023-03-05T10:19:31.934Z] Platform:      win32
+[debug] [2023-03-05T10:19:31.934Z] Node Version:  v18.12.1
+[debug] [2023-03-05T10:19:31.941Z] Time:          Sun Mar 05 2023 15:19:31 GMT+0500 (Pakistan Standard Time)
+[debug] [2023-03-05T10:19:31.941Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-05T10:19:31.950Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-03-05T10:19:32.112Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-05T10:19:32.112Z] > authorizing via signed-in user (183194@students.au.edu.pk)
+[debug] [2023-03-05T10:19:32.113Z] [iam] checking project healthcare-erp-4b646 for permissions ["firebase.projects.get"]
+[debug] [2023-03-05T10:19:32.114Z] > refreshing access token with scopes: []
+[debug] [2023-03-05T10:19:32.115Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-03-05T10:19:32.115Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-03-05T10:19:33.096Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-03-05T10:19:33.096Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-03-05T10:19:33.104Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/healthcare-erp-4b646:testIamPermissions [none]
+[debug] [2023-03-05T10:19:33.104Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/healthcare-erp-4b646:testIamPermissions x-goog-quota-user=projects/healthcare-erp-4b646
+[debug] [2023-03-05T10:19:33.104Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/healthcare-erp-4b646:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-03-05T10:19:33.350Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-03-05T10:19:33.350Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-03-05T10:19:34.940Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/healthcare-erp-4b646:testIamPermissions 200
+[debug] [2023-03-05T10:19:34.941Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/healthcare-erp-4b646:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-03-05T10:19:34.942Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/healthcare-erp-4b646 [none]
+[debug] [2023-03-05T10:19:35.933Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/healthcare-erp-4b646 200
+[debug] [2023-03-05T10:19:35.933Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/healthcare-erp-4b646 {"projectId":"healthcare-erp-4b646","projectNumber":"516216448641","displayName":"healthcare-erp","name":"projects/healthcare-erp-4b646","resources":{"hostingSite":"healthcare-erp-4b646"},"state":"ACTIVE","etag":"1_520e3f55-4657-47bc-9a83-f1ca3d88aaeb"}
+[debug] [2023-03-05T10:19:35.937Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/healthcare-erp-4b646/sites 
+[debug] [2023-03-05T10:19:38.473Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/healthcare-erp-4b646/sites 200
+[debug] [2023-03-05T10:19:38.474Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/healthcare-erp-4b646/sites {"sites":[{"name":"projects/healthcare-erp-4b646/sites/healthcare-erp-4b646","defaultUrl":"https://healthcare-erp-4b646.web.app","appId":"1:516216448641:web:26879e4622fa47f91ccf80","type":"DEFAULT_SITE"}]}
+[debug] [2023-03-05T10:19:38.474Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/healthcare-erp-4b646/webApps/1:516216448641:web:26879e4622fa47f91ccf80/config [none]
+[debug] [2023-03-05T10:19:40.823Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/healthcare-erp-4b646/webApps/1:516216448641:web:26879e4622fa47f91ccf80/config 200
+[debug] [2023-03-05T10:19:40.824Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/healthcare-erp-4b646/webApps/1:516216448641:web:26879e4622fa47f91ccf80/config {"projectId":"healthcare-erp-4b646","appId":"1:516216448641:web:26879e4622fa47f91ccf80","storageBucket":"healthcare-erp-4b646.appspot.com","apiKey":"AIzaSyBZ83SAYYYr-7d2txapr-9utl_KNYNeHto","authDomain":"healthcare-erp-4b646.firebaseapp.com","messagingSenderId":"516216448641","measurementId":"G-GD1580P5ET"}
+[debug] [2023-03-05T10:19:40.829Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/healthcare-erp-4b646 [none]
+[debug] [2023-03-05T10:19:43.467Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/healthcare-erp-4b646 200
+[debug] [2023-03-05T10:19:43.467Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/healthcare-erp-4b646 {"projectId":"healthcare-erp-4b646","projectNumber":"516216448641","displayName":"healthcare-erp","name":"projects/healthcare-erp-4b646","resources":{"hostingSite":"healthcare-erp-4b646"},"state":"ACTIVE","etag":"1_520e3f55-4657-47bc-9a83-f1ca3d88aaeb"}
+[info] i  hosting[healthcare-erp-4b646]: Serving hosting files from: ./public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1m./public\u001b[22m"}}
+[info] +  hosting[healthcare-erp-4b646]: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[info] i  hosting: ::1 - - [05/Mar/2023:10:22:30 +0000] "GET / HTTP/1.1" 200 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [05/Mar/2023:10:22:30 +0000] \"GET / HTTP/1.1\" 200 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [05/Mar/2023:10:22:30 +0000] "GET /styles/style.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [05/Mar/2023:10:22:30 +0000] \"GET /styles/style.css HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [05/Mar/2023:10:22:31 +0000] "GET /scripts/main.js HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [05/Mar/2023:10:22:31 +0000] \"GET /scripts/main.js HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [05/Mar/2023:10:22:33 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [05/Mar/2023:10:22:33 +0000] \"GET /favicon.ico HTTP/1.1\" 404 150 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36\""}}

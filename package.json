@@ -1,0 +1,19 @@
+{
+  "name": "HRMS HealthCare",
+  "version": "1.0.0",
+  "description": "HRMS for HealthCare",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack --watch --progress",
+    "visualize-bundle": "webpack --analyze"
+  },
+  "author": "Muhammad Usman Shah",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "firebase": "^9.15.0",
+    "webpack": "^5.75.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.0.1"
+  }
+}
